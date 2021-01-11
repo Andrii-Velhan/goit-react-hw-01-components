@@ -1,9 +1,29 @@
-import statisticalData from '../../bd/statistical-data.json'
-// import ReactDOM from 'react-dom';
-
-export default function Statistics({ title, stats }) {
+import PropTypes from 'prop-types';
+export default function Statistics({
+	// title,
+	title = '',
+	stats
+}) {
 	return (
-		<Statistics title="Upload stats" stats={statisticalData} />
-		<Statistics stats={statisticalData} />
-	)
+		<section className="statistics">
+			{title && <h2 className="title">{title}</h2>}
+
+			<ul className="stat-list">
+				{stats.map(stat =>
+					<li className="item">
+						<span className="label">{stat.label}</span>
+						<span className="percentage"> {stat.percentage}%</span>
+					</li>
+				)}
+			</ul>
+		</section>)
 }
+
+Statistics.propTypes = {
+	title: PropTypes.string,
+	stats: PropTypes.node,
+}
+
+// Statistics.defaultProps = {
+// 	title: '',
+// }
