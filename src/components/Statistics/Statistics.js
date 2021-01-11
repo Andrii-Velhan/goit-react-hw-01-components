@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 export default function Statistics({
-	// title,
-	title = '',
-	stats
+	title,
+	stats,
 }) {
 	return (
 		<section className="statistics">
@@ -10,7 +9,7 @@ export default function Statistics({
 
 			<ul className="stat-list">
 				{stats.map(stat =>
-					<li className="item">
+					<li key={stat.id} className="item">
 						<span className="label">{stat.label}</span>
 						<span className="percentage"> {stat.percentage}%</span>
 					</li>
@@ -21,9 +20,20 @@ export default function Statistics({
 
 Statistics.propTypes = {
 	title: PropTypes.string,
-	stats: PropTypes.node,
+	stats: PropTypes.shape({
+		id: PropTypes.string,
+		label: PropTypes.string,
+		percentage: PropTypes.number,
+	}),
+	// stats: PropTypes.objectOf(
+	// 	PropTypes.shape({
+	// 		id: PropTypes.string,
+	// 		label: PropTypes.string,
+	// 		percentage: PropTypes.number,
+	// 	}),
+	// ),
 }
 
-// Statistics.defaultProps = {
-// 	title: '',
-// }
+Statistics.defaultProps = {
+	title: '',
+}

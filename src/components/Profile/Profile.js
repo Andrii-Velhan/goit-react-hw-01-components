@@ -5,7 +5,7 @@ export default function Profile({
 	name,
 	tag,
 	location,
-	avatar = defaultImage,
+	avatar,
 	stats,
 }) {
 	return (
@@ -45,5 +45,13 @@ Profile.propTypes = {
 	tag: PropTypes.string.isRequired,
 	location: PropTypes.string.isRequired,
 	avatar: PropTypes.string.isRequired,
-	stats: PropTypes.node,
+	stats: PropTypes.shape({
+		followers: PropTypes.number,
+		views: PropTypes.number,
+		likes: PropTypes.number,
+	}),
+}
+
+Profile.defaultProps = {
+	avatar: defaultImage,
 }
