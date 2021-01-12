@@ -20,18 +20,13 @@ export default function Statistics({
 
 Statistics.propTypes = {
 	title: PropTypes.string,
-	stats: PropTypes.shape({
-		id: PropTypes.string,
-		label: PropTypes.string,
-		percentage: PropTypes.number,
-	}),
-	// stats: PropTypes.objectOf(
-	// 	PropTypes.shape({
-	// 		id: PropTypes.string,
-	// 		label: PropTypes.string,
-	// 		percentage: PropTypes.number,
-	// 	}),
-	// ),
+	stats: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string,
+			label: PropTypes.string,
+			percentage: PropTypes.number,
+		}),
+	),
 }
 
 Statistics.defaultProps = {
