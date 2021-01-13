@@ -1,11 +1,11 @@
 .status {
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color: red;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
 }
 
 .status.isOnline {
-	background-color: green;
+  background-color: green;
 }
