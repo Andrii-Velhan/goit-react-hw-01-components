@@ -9,6 +9,7 @@ import friends from '../src/bd/friends.json';
 
 import TransactionHistory from '../src/components/TransactionHistory/TransactionHistory';
 import transactions from '../src/bd/transactions.json';
+
 import './App.css';
 
 export default function App() {

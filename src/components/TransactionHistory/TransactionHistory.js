@@ -34,6 +34,6 @@ TransactionHistory.propTypes = {
   ),
 };
 
-// TransactionHistory.defaultProps = {
-// 	title: '',
-// }
+TransactionHistory.defaultProps = {
+  items: '',
+};
