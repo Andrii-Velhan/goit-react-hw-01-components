@@ -46,7 +46,7 @@ Profile.propTypes = {
 Profile.defaultProps = {
   // name: 'не указано',
   avatar: defaultImage,
-  stats: [],
+  stats: {},
 };
 
 // Profile.defaultProps = {
