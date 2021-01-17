@@ -12,7 +12,7 @@
 #root {
   margin: 0px auto;
   max-width: 768px;
-  outline: 1px solid yellowgreen;
+  /* outline: 1px solid yellowgreen; */
 }
 
 body {
@@ -22,6 +22,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(241, 234, 234);
 }
 
 img {
